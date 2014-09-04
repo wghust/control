@@ -96,6 +96,7 @@ a {
 	padding: 5px 10px;
 	border: 1px solid #e3e3e3;
 	z-index: 1;
+	display: none;
 }
 .useroplist .msg:focus {
 	color: white;
