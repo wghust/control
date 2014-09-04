@@ -26,7 +26,8 @@ $(document).ready(function() {
                 data: data,
                 success: function(data) {
                     // console.log(data);
-                    var data = data;
+                    // var data = data;
+                    console.log(data);
                     $(".submitadmin").val("登录成功!");
                     $(".admin").animate({
                         'left': '100%'
@@ -37,7 +38,7 @@ $(document).ready(function() {
                     $(".submitadmin").val("账户密码错误!");
                 },
                 dataType: 'json'
-            });
+            }, 'json');
         });
     }
     // }
