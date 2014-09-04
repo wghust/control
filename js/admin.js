@@ -21,7 +21,8 @@ $(document).ready(function() {
                 type: 'POST',
                 url: 'http://sa.kascend.com/auth/login',
                 data: data,
-                success: function() {
+                success: function(data) {
+                    console.log(data);
                     $(".submitadmin").val("登录成功!");
                     $(".admin").css({
                         'display': 'none'
