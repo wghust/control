@@ -14,7 +14,8 @@ $(document).ready(function() {
                     _thisround.css({
                         'display': 'none'
                     });
-                    console.log(data);
+                    projectlistop(data);
+                    // console.log(data);
                 },
                 error: function(data, textStatus, jqXHR) {
                     adminlogin();
@@ -22,6 +23,9 @@ $(document).ready(function() {
                 dataType: 'json'
             });
         });
+    };
+    projectlistop = function(data) {
+        $("")
     };
     checkCookie(adminlogin, projectop);
 });
