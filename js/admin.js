@@ -14,7 +14,7 @@ $(document).ready(function() {
             var password = $('.password').val();
             var data = {
                 'username': username,
-                'password': passwrod
+                'password': password
             };
             $(".submitadmin").val("登陆中");
             $.ajax({
