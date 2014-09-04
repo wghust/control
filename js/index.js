@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    var editor = CodeMirror.fromTextArea(document.getElementById("output"), {
+        lineNumbers: true,
+        styleActiveLine: true,
+        matchBrackets: true
+    });
+    editor.setOption("theme", "monokai");
+
     projectop = function() {
         $(".useroplist").click(function() {
             var _this = $(this);

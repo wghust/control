@@ -6,9 +6,17 @@
 	<title>Control</title>
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="highlight/lib/codemirror.js"></script>
+	<script src="highlight/mode/shell/shell.js"></script>
+	<script src="highlight/addon/selection/active-line.js"></script>
+	<script src="highlight/addon/edit/matchbrackets.js"></script>
+	<!-- <script type="text/javascript" src="highlight/addon/mode/loadmode.js"></script> -->
+
 	<script type="text/javascript" src="js/checkcookie.js"></script>
 	<script type="text/javascript" src="js/admin.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/highlighttheme.min.css">
+	<link rel="stylesheet" type="text/css" href="highlight/lib/codemirror.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
@@ -45,7 +53,7 @@
 		</div>
 	</div>
 	<div class="frameweb">
-		<iframe src="" class="output"></iframe>
+		<iframe src="" class="output" id="output"></iframe>
 	</div>
 </body>
 </html>
