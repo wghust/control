@@ -29,7 +29,7 @@ $(document).ready(function() {
         $(".secopcontent").text('');
         $(".sectitle").text('');
 
-        $(".sectitle").text("<span class='back'>返回</span>&nbsp;&nbsp;" + data.name);
+        $(".sectitle").html("<span class='back'>返回</span>&nbsp;&nbsp;" + data.name);
         $(".back").click(function() {
             $(".sec").slideUp(1000, function() {
                 $(".userop").slideDown(1000);
