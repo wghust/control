@@ -46,34 +46,13 @@ $(document).ready(function() {
         $(".secdiv").click(function() {
             var _this = $(this);
             var _thisurl = _this.data('target');
-            var _thisnowurl = _thisurl.substring(4, _thisurl.length);
-            var wsServer = 'ws' + _thisnowurl;
-            console.log(wsServer);
-            var websocket = new WebSocket(wsServer);
-            websocket.onopen = function(evt) {
-                onOpen(evt);
-            };
-            websocket.onclose = function(evt) {
-                onClosed(evt);
-            };
-            websocket.onmessage = function(evt) {
-                onMessage(evt);
-            };
-            websocket.onerror = function(evt) {
-                onErrors(evt);
-            };
-            onOpen = function(evt) {
-                console.log(evt);
-            };
-            onClosed = function(evt) {
-                console.log(evt);
-            };
-            onMessage = function(evt) {
-                console.log(evt.data + '\n');
-            };
-            onErrors = function(evt) {
-                console.log(evt);
-            };
+            $(".frameweb").animate({
+                'bottom': '0'
+            }, 1000, function() {
+                $(".output").attr({
+                    'src': _thisurl
+                });
+            });
             // $.ajax({
             //     type: 'GET',
             //     url: _thisurl,
