@@ -36,7 +36,7 @@ $(document).ready(function() {
                     $(".user_name").text(data.name);
                     $(".useropcontent").text('');
                     for (i = 0; i < data.profile.length; i++) {
-                        var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span><span class='msg'><img src='../imgs/hc.gif'></span></div>";
+                        var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span><span class='msg'><img src='http://sa.kascend.com/control/imgs/hc.gif'></span></div>";
                         $(".useropcontent").append(str);
                     }
                     fn();
