@@ -24,7 +24,7 @@ a {
 	height: 100%;
 	width: 100%;
 	background-color: #3592DD;
-	/*display: none;*/
+	display: none;
 	z-index: 10;
 }
 .admin .admin-pageheader {

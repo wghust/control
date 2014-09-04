@@ -10,6 +10,7 @@ $(document).ready(function() {
         //     'display': 'block'
         // });
         $(".admin").animate({
+            'display': 'inline-block',
             'left': '0'
         }, 1000);
         $(".submitadmin").click(function() {
@@ -31,6 +32,7 @@ $(document).ready(function() {
                     // console.log(data.name);
                     $(".submitadmin").val("登录成功!");
                     $(".admin").animate({
+                        'display': 'none',
                         'left': '100%'
                     }, 1000);
                     $(".user_name").text(data.name);
