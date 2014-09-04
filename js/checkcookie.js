@@ -19,7 +19,7 @@ $(document).ready(function() {
                     $(".userifm .user_name").text(data.name);
                     $(".useropcontent").text('');
                     for (i = 0; i < data.profile.length; i++) {
-                        var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>标题:" + data.profile[i].title + "</span><br><span>项目名:" + data.profile[i].name + "</span></div>";
+                        var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>标题:" + data.profile[i].title + "</span><br><span>项目名:" + data.profile[i].name + "</span><span class='msg'>查看</span></div>";
                         $(".useropcontent").append(str);
                     }
                     fn2();
