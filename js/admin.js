@@ -6,9 +6,12 @@ $(document).ready(function() {
         // $.cookie('sa', '');
         // if (sacookie == '' || sacookie == null) {
         // $.cookie('sa', '123');
-        $(".admin").css({
-            'display': 'block'
-        });
+        // $(".admin").css({
+        //     'display': 'block'
+        // });
+        $(".admin").animate({
+            'left': '0'
+        }, 1000);
         $(".submitadmin").click(function() {
             var username = $('.username').val();
             var password = $('.password').val();
@@ -22,11 +25,13 @@ $(document).ready(function() {
                 url: 'http://sa.kascend.com/auth/login',
                 data: data,
                 success: function(data) {
-                    console.log(data);
+                    // console.log(data);
+                    var data = data;
                     $(".submitadmin").val("登录成功!");
-                    $(".admin").css({
-                        'display': 'none'
-                    });
+                    $(".admin").animate({
+                        'left': '100%'
+                    }, 1000);
+                    $(".userifm .username").text(data.name);
                 },
                 error: function() {
                     $(".submitadmin").val("账户密码错误!");
