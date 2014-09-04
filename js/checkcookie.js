@@ -19,8 +19,8 @@ $(document).ready(function() {
                         fn();
                     }
                 },
-                error: function(error, jqXHR) {
-                    console.log(jqXHR);
+                error: function(error) {
+                    // console.log(jqXHR);
                     fn();
                 },
                 dataType: 'json'
