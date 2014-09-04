@@ -111,10 +111,13 @@ a {
 	border: 1px solid #e3e3e3;
 }
 .sec {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 60%;
-	height: 200px;
+	width: 100%;
+	margin-top: 10px;
+	display:none;
+}
+.secdiv {
+	padding: 10px 20px;
 	background-color: white;
+	margin-bottom: 10px;
+	position: relative;
 }
