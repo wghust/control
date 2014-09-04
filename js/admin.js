@@ -1,5 +1,6 @@
 $(document).ready(function() {
     adminlogin = function(fn) {
+        alert("right");
         var sacookie = $.cookie('sa');
 
         // alert(sacookie);
