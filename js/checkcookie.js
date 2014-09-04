@@ -13,11 +13,7 @@ $(document).ready(function() {
                 type: 'GET',
                 url: 'http://sa.kascend.com/auth/info',
                 success: function(data, textStatus, jqXHR) {
-                    if (jqXHR.status == 200) {
-
-                    } else {
-                        fn();
-                    }
+                    dataop(data);
                 },
                 error: function(error) {
                     // console.log(jqXHR);

@@ -12,11 +12,25 @@ $(document).ready(function() {
         $(".submitadmin").click(function() {
             var username = $('.username').val();
             var password = $('.password').val();
-            $.post("http://sa.kascend.com/auth/login", {
+            var data = {
                 'username': username,
-                'password': password
-            }, function(callback) {
-                console.log(callback);
+                'password': passwrod
+            };
+            $(".submitadmin").val("登陆中");
+            $.ajax({
+                type: 'POST',
+                url: 'http://sa.kascend.com/auth/login',
+                data: data,
+                success: function() {
+                    $(".submitadmin").val("登录成功!");
+                    $(".admin").css({
+                        'display': 'none'
+                    });
+                },
+                error: function() {
+                    $(".submitadmin").val("账户密码错误!");
+                },
+                dataType: 'json'
             });
         });
     }
