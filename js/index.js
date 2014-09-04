@@ -53,24 +53,24 @@ $(document).ready(function() {
                 onOpen(evt);
             };
             websocket.onclose = function(evt) {
-                onClose(evt);
+                onClosed(evt);
             };
             websocket.onmessage = function(evt) {
                 onMessage(evt);
             };
             websocket.onerror = function(evt) {
-                onerror(evt);
+                onErrors(evt);
             };
-            onopen = function(evt) {
+            onOpen = function(evt) {
                 console.log(evt);
             };
-            onclose = function(evt) {
+            onClosed = function(evt) {
                 console.log(evt);
             };
-            onmessage = function(evt) {
+            onMessage = function(evt) {
                 console.log(evt.data + '\n');
             };
-            onerror = function(evt) {
+            onErrors = function(evt) {
                 console.log(evt);
             };
             // $.ajax({
