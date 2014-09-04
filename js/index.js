@@ -48,6 +48,7 @@ $(document).ready(function() {
             var _thisurl = _this.data('target');
             var _thisnowurl = _thisurl.substring(4, _thisurl.length);
             var wsServer = 'ws' + _thisnowurl;
+            console.log(wsServer);
             var websocket = new WebSocket(wsServer);
             websocket.onopen = function(evt) {
                 onOpen(evt);
