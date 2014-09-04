@@ -5,13 +5,13 @@ $(document).ready(function() {
         if (sa == '' || sa == null) {
             fn();
         } else {
-            var data = {
-                'sa': sa
-            };
+            // var data = {
+            //     'sa': sa
+            // };
+
             $.ajax({
-                type: 'POST',
+                type: 'GET',
                 url: 'http://sa.kascend.com/auth/info',
-                data: data,
                 success: function(data, textStatus, jqXHR) {
                     if (jqXHR.status == 200) {
 
@@ -21,6 +21,7 @@ $(document).ready(function() {
                 },
                 error: function(error, jqXHR) {
                     console.log(jqXHR);
+                    fn();
                 },
                 dataType: 'json'
             })
