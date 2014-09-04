@@ -10,7 +10,7 @@ $(document).ready(function() {
             };
             $.ajax({
                 type: 'POST',
-                url: 'sa.kascend.com/auth/info',
+                url: 'http://sa.kascend.com/auth/info',
                 data: data,
                 success: function(data, textStatus, jqXHR) {
                     if (jqXHR.status == 200) {
@@ -18,6 +18,9 @@ $(document).ready(function() {
                     } else {
                         fn();
                     }
+                },
+                error: function(error, jqXHR) {
+                    console.log(jqXHR);
                 },
                 dataType: 'json'
             })
