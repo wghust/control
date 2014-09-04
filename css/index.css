@@ -99,6 +99,7 @@ a {
 	/*border: 1px solid #e3e3e3;*/
 	z-index: 1;
 	/*display: none;*/
+	display: none;
 }
 .useroplist .msg img {
 	width: 100%;
