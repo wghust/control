@@ -51,7 +51,7 @@ $(document).ready(function() {
                 type: 'GET',
                 url: _thisurl,
                 success: function(data, textStatus, jqXHR) {
-                    showdata(data);
+                    // showdata(data);
                 },
                 error: function(data, textStatus, jqXHR) {
                     adminlogin();
@@ -63,7 +63,7 @@ $(document).ready(function() {
 
     showdata = function(data) {
         // $(".")
-        console.log(data);
+        // console.log(data);
     };
     checkCookie(adminlogin, projectop);
 });
