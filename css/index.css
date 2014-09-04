@@ -25,6 +25,7 @@ a {
 	width: 100%;
 	background-color: #3592DD;
 	/*display: none;*/
+	z-index: 2;
 }
 .admin .admin-pageheader {
 	/*width: 100%;*/
@@ -85,12 +86,16 @@ a {
 	margin-bottom: 10px;
 	position: relative;
 }
+.listcontainer {
+	position: relative;
+}
 .useroplist .msg {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	padding: 5px 10px;
 	border: 1px solid #e3e3e3;
+	z-index: 1;
 }
 .useroplist .msg:focus {
 	color: white;
