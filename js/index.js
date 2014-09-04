@@ -24,7 +24,6 @@ $(document).ready(function() {
             });
         });
     };
-
     projectlistop = function(data) {
         // 置空
         $(".secopcontent").text('');
@@ -44,8 +43,21 @@ $(document).ready(function() {
         $(".userop").slideUp(1000, function() {
             $(".sec").slideDown(1000);
         });
+        $(".secdiv").click(function() {
+            var _this = $(this);
+            var _thisurl = _this.data('target');
+            $.ajax({
+                type: 'GET',
+                url: _thisurl,
+                success: function(data, textStatus, jqXHR) {
 
+                },
+                error: function(data, textStatus, jqXHR) {
+
+                },
+                dataType: 'json'
+            })
+        });
     };
-
     checkCookie(adminlogin, projectop);
 });
