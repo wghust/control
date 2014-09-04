@@ -17,6 +17,11 @@ $(document).ready(function() {
                     // console.log(data);
                     var data = data;
                     $(".userifm .user_name").text(data.name);
+                    $(".useropcontent").text('');
+                    for (i = 0; i < data.profile.length; i++) {
+                        var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>标题:" + data.profile[i].title + "</span><br><span>项目名:" + data.profile[i].name + "</span></div>";
+                        $(".useropcontent").append(str);
+                    }
                 },
                 error: function(error) {
                     // console.log(jqXHR);
