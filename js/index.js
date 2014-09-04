@@ -2,7 +2,7 @@ $(document).ready(function() {
     projectop = function() {
         $(".useroplist").click(function() {
             var _this = $(this);
-            var nexturl = _this.data('traget');
+            var nexturl = _this.data('target');
             $(".msg").css({
                 'display': 'inline-block'
             });
