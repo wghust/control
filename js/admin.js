@@ -28,11 +28,12 @@ $(document).ready(function() {
                     // console.log(data);
                     // var data = data;
                     console.log(data);
+                    console.log(data.name);
                     $(".submitadmin").val("登录成功!");
                     $(".admin").animate({
                         'left': '100%'
                     }, 1000);
-                    $(".userifm .user_admin").text(data.name);
+                    $(".user_name").text(data.name);
                 },
                 error: function() {
                     $(".submitadmin").val("账户密码错误!");
