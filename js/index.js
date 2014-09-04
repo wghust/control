@@ -1,9 +1,5 @@
 $(document).ready(function() {
-    var editor = CodeMirror.fromTextArea(document.getElementById("output"), {
-        lineNumbers: true,
-        styleActiveLine: true,
-        matchBrackets: true
-    });
+    var editor = CodeMirror.fromTextArea(document.getElementById("output"));
     editor.setOption("theme", "monokai");
 
     projectop = function() {
