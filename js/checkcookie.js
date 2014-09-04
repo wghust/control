@@ -16,7 +16,7 @@ $(document).ready(function() {
                     // dataop(data);
                     // console.log(data);
                     var data = data;
-                    $(".userifm .username").text(data.name);
+                    $(".userifm .user_name").text(data.name);
                 },
                 error: function(error) {
                     // console.log(jqXHR);

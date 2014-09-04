@@ -31,7 +31,7 @@ $(document).ready(function() {
                     $(".admin").animate({
                         'left': '100%'
                     }, 1000);
-                    $(".userifm .username").text(data.name);
+                    $(".userifm .user_admin").text(data.name);
                 },
                 error: function() {
                     $(".submitadmin").val("账户密码错误!");
