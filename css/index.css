@@ -123,10 +123,16 @@ a {
 }
 .back {
 	display: block;
-	width: 10px;
-	height: 10px;
-	border: 1px solid white;
-	border-radius: 10px;
+	width: 30px;
+	height: 30px;
+	/*border: 1px solid white;*/
+	border-radius: 30px;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	line-height: 30px;
+	text-align: center;
+	background-color: white;
 }
 .sectitle {
 	padding: 10px 20px;
