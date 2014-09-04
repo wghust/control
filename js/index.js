@@ -31,18 +31,18 @@ $(document).ready(function() {
 
         $(".sectitle").text("<span class='back'>返回</span>&nbsp;&nbsp;" + data.name);
         $(".back").click(function() {
-            $(".sec").slideUp(function() {
+            $(".sec").slideUp(1000, function() {
                 $(".userop").slideDown(1000);
-            }, 1000);
+            });
         });
 
         for (i = 0; i < data.profile.length; i++) {
             var str = "<div class='secdiv' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span></div>";
             $(".secopcontent").append(str);
         }
-        $(".userop").slideUp(function() {
+        $(".userop").slideUp(1000, function() {
             $(".sec").slideDown(1000);
-        }, 1000);
+        });
     };
     checkCookie(adminlogin, projectop);
 });
