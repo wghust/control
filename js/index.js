@@ -50,7 +50,7 @@ $(document).ready(function() {
                 type: 'GET',
                 url: _thisurl,
                 success: function(data, textStatus, jqXHR) {
-
+                    showbackdata(data);
                 },
                 error: function(data, textStatus, jqXHR) {
 
@@ -58,6 +58,10 @@ $(document).ready(function() {
                 dataType: 'json'
             })
         });
+    };
+
+    showbackdata = function(data) {
+        console.log(data);
     };
     checkCookie(adminlogin, projectop);
 });
