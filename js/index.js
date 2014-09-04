@@ -3,14 +3,15 @@ $(document).ready(function() {
         $(".useroplist").click(function() {
             var _this = $(this);
             var nexturl = _this.data('target');
-            $(".msg").css({
+            var _thisround = _this.children(".msg");
+            _thisround.css({
                 'display': 'inline-block'
             });
             $.ajax({
                 type: 'GET',
                 url: nexturl,
                 success: function(data, textStatus, jqXHR) {
-                    $(".msg").css({
+                    _thisround.css({
                         'display': 'none'
                     });
                     console.log(data);
