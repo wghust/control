@@ -14,6 +14,7 @@ $(document).ready(function() {
                 url: 'http://sa.kascend.com/auth/info',
                 success: function(data, textStatus, jqXHR) {
                     // dataop(data);
+                    console.log(data);
                 },
                 error: function(error) {
                     // console.log(jqXHR);
