@@ -1,6 +1,5 @@
 $(document).ready(function() {
     adminlogin = function(fn) {
-        alert("right");
         var sacookie = $.cookie('sa');
 
         // alert(sacookie);
@@ -10,6 +9,9 @@ $(document).ready(function() {
         // $(".admin").css({
         //     'display': 'block'
         // });
+        $(".admin").css({
+            'display': 'inline-block'
+        });
         $(".admin").animate({
             'display': 'inline-block',
             'left': '0'
@@ -32,8 +34,10 @@ $(document).ready(function() {
                     // console.log(data);
                     // console.log(data.name);
                     $(".submitadmin").val("登录成功!");
+                    $(".admin").css({
+                        'display': 'none'
+                    });
                     $(".admin").animate({
-                        'display': 'none',
                         'left': '100%'
                     }, 1000);
                     $(".user_name").text(data.name);
