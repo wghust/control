@@ -46,17 +46,44 @@ $(document).ready(function() {
         $(".secdiv").click(function() {
             var _this = $(this);
             var _thisurl = _this.data('target');
-            $.ajax({
-                type: 'GET',
-                url: _thisurl,
-                success: function(data, textStatus, jqXHR) {
-                    showbackdata(data);
-                },
-                error: function(data, textStatus, jqXHR) {
+            var _thisnowurl = _thisurl.substring(4, _thisurl.length);
+            var wsServer = 'ws' + _thisnowurl;
+            var websocket = new WebSocket(wsServer);
+            websocket.onopen = function(evt) {
+                onOpen(evt);
+            };
+            websocket.onclose = function(evt) {
+                onClose(evt);
+            };
+            websocket.onmessage = function(evt) {
+                onMessage(evt);
+            };
+            websocket.onerror = function(evt) {
+                onerror(evt);
+            };
+            onopen = function(evt) {
+                console.log(evt);
+            };
+            onclose = function(evt) {
+                console.log(evt);
+            };
+            onmessage = function(evt) {
+                console.log(evt.data + '\n');
+            };
+            onerror = function(evt) {
+                console.log(evt);
+            };
+            // $.ajax({
+            //     type: 'GET',
+            //     url: _thisurl,
+            //     success: function(data, textStatus, jqXHR) {
+            //         showbackdata(data);
+            //     },
+            //     error: function(data, textStatus, jqXHR) {
 
-                },
-                dataType: 'json'
-            })
+            //     },
+            //     dataType: 'json'
+            // })
         });
     };
 
