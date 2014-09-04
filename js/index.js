@@ -24,6 +24,7 @@ $(document).ready(function() {
             });
         });
     };
+
     projectlistop = function(data) {
         // 置空
         $(".secopcontent").text('');
@@ -43,6 +44,26 @@ $(document).ready(function() {
         $(".userop").slideUp(1000, function() {
             $(".sec").slideDown(1000);
         });
+        $(".secdiv").click(function() {
+            var _this = $(this);
+            var _thisurl = _this.data('target');
+            $.ajax({
+                type: 'GET',
+                url: _thisurl,
+                success: function(data, textStatus, jqXHR) {
+                    showdata(data);
+                },
+                error: function(data, textStatus, jqXHR) {
+                    adminlogin();
+                },
+                dataType: 'json'
+            })
+        });
+    };
+
+    showdata = function(data) {
+        // $(".")
+        console.log(data);
     };
     checkCookie(adminlogin, projectop);
 });
