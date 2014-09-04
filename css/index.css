@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	background-color: #F2F2F2;
 }
 ul {
 	padding: 0;
@@ -56,4 +57,15 @@ a {
 	padding: 5px 10px;
 	background-color: transparent;
 	cursor: pointer;
+}
+
+
+/* 首页  */
+.index {
+	width: 100%;
+}
+.index .userifm {
+	/*width: 100%;*/
+	padding: 5px 20px;
+	background-color: white;
 }
