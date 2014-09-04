@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    var editor = CodeMirror.fromTextArea(document.getElementById("output"));
-    editor.setOption("theme", "monokai");
 
     projectop = function() {
         $(".useroplist").click(function() {
