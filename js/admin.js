@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    adminlogin = function() {
+    adminlogin = function(fn) {
         var sacookie = $.cookie('sa');
 
         // alert(sacookie);
@@ -39,6 +39,7 @@ $(document).ready(function() {
                         var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>标题:" + data.profile[i].title + "</span><br><span>项目名:" + data.profile[i].name + "</span><span class='msg'></span></div>";
                         $(".useropcontent").append(str);
                     }
+                    fn();
                 },
                 error: function() {
                     $(".submitadmin").val("账户密码错误!");

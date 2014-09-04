@@ -1,9 +1,9 @@
 $(document).ready(function() {
     //确认Cookie函数
-    checkCookie = function(fn) {
+    checkCookie = function(fn, fn2) {
         var sa = $.cookie('sa');
         if (sa == '' || sa == null) {
-            fn();
+            fn(fn2);
         } else {
             // var data = {
             //     'sa': sa
@@ -22,10 +22,11 @@ $(document).ready(function() {
                         var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>标题:" + data.profile[i].title + "</span><br><span>项目名:" + data.profile[i].name + "</span></div>";
                         $(".useropcontent").append(str);
                     }
+                    fn2();
                 },
                 error: function(error) {
                     // console.log(jqXHR);
-                    fn();
+                    fn(fn2);
                 },
                 dataType: 'json'
             })

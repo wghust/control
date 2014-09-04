@@ -1,7 +1,9 @@
 $(document).ready(function() {
-    checkCookie(adminlogin);
+    checkCookie(adminlogin, projectop);
 
-    $(".useroplist").click(function() {
-        alert($(this).children('span').eq(0).text());
-    });
+    projectop = function() {
+        $(".useroplist").click(function() {
+            alert($(this).children('span').eq(0).text());
+        });
+    };
 });
