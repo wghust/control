@@ -2,6 +2,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: #F2F2F2;
+	font-family: tahoma;
 }
 ul {
 	padding: 0;
@@ -68,6 +69,17 @@ a {
 	/*width: 100%;*/
 	padding: 10px 20px;
 	background-color: white;
-	font-family: tahoma;
 	font-size: 24px;
+}
+.index .userop {
+	width: 100%;
+	margin-top: 10px;
+}
+.userop .useroptitle {
+	padding: 10px 20px;
+	font-size: 18px;
+}
+.userop .useroplist {
+	padding: 10px 20px;
+	background-color: white;
 }

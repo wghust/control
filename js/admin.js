@@ -27,13 +27,18 @@ $(document).ready(function() {
                 success: function(data) {
                     // console.log(data);
                     // var data = data;
-                    console.log(data);
-                    console.log(data.name);
+                    // console.log(data);
+                    // console.log(data.name);
                     $(".submitadmin").val("登录成功!");
                     $(".admin").animate({
                         'left': '100%'
                     }, 1000);
                     $(".user_name").text(data.name);
+                    $(".useropcontent").text('');
+                    for (i = 0; i < data.profile.length; i++) {
+                        var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>标题:" + data.profile[i].title + "</span><br><span>项目名:" + data.profile[i].name + "</span></div>";
+                        $(".useropcontent").append(str);
+                    }
                 },
                 error: function() {
                     $(".submitadmin").val("账户密码错误!");
