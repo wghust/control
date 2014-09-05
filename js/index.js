@@ -178,11 +178,17 @@ $(document).ready(function() {
     $(".logout").click(function(e) {
         var nowcookie = $.cookie('sa');
         if (nowcookie !== null || nowcookie !== '') {
-            $.cookie('sa', null, {
-                path: '/'
+            $.ajax({
+                type: 'GET',
+                url: 'sa.kascend.com/auth/out',
+                success: function(data, textStatus, jqXHR) {
+                    alert("退出成功");
+                    location.reload();
+                },
+                error: function(data, textStatus, jqXHR) {
+                    alert("退出失败");
+                }
             });
-            alert("退出成功");
-            location.reload();
         }
         return false;
     });
