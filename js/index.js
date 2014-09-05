@@ -27,7 +27,7 @@ $(document).ready(function() {
                     // console.log(data);
                 },
                 error: function(data, textStatus, jqXHR) {
-                    adminlogin();
+                    checkCookie(adminlogin, projectop);
                 },
                 dataType: 'json'
             });
