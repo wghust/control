@@ -181,12 +181,28 @@ a {
 .frametoptitle {
 	font-size: 20px;
 }
+.cmd {
+	border:1px solid white;
+	width: 30px;
+}
 .goback {
 	float: right;
 	border: 1px solid white;
 	/*padding: 5px 10px;*/
 	/*margin-top: 5px;*/
 	/*border: ;*/
+	background-color: #f2f2f2;
+	font-size: 12px;
+	height: 30px;
+	margin-top: 5px;
+	line-height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: black;
+}
+.newurl {
+	float: right;
+	border: 1px solid white;
 	background-color: #f2f2f2;
 	font-size: 12px;
 	height: 30px;
