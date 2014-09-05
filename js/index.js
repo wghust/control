@@ -60,7 +60,22 @@ $(document).ready(function() {
                     'src': _thisurl
                 });
             });
-            serverStop();
+            $(window).load(function() {
+                $(".goback").removeAttr('disabled');
+                isrun = false;
+                $(".goback").click(function() {
+                    $(".frameweb").animate({
+                        'bottom': '-240px'
+                    }, 1000);
+                    $(".bg").css({
+                        'display': 'none'
+                    });
+                    $(".output").attr({
+                        'src': ''
+                    });
+                });
+            });
+            // serverStop();
         });
     };
 
@@ -77,6 +92,12 @@ $(document).ready(function() {
             $(".frameweb").animate({
                 'bottom': '-240px'
             }, 1000);
+            $(".bg").css({
+                'display': 'none'
+            });
+            $(".output").attr({
+                'src': ''
+            });
         });
     };
 
