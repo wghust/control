@@ -60,7 +60,7 @@ $(document).ready(function() {
                     'src': _thisurl
                 });
             });
-            var iframe = $(".frameweb");
+            var iframe = $(".output");
             if (iframe.attachEvent) {
                 iframe.attachEvent("onload", function() {
                     serverStop();
@@ -75,6 +75,7 @@ $(document).ready(function() {
     };
 
     serverStop = function() {
+        console.log("ok");
         $(".goback").removeAttr('disabled');
         isrun = false;
         $(".goback").click(function() {
