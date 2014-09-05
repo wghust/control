@@ -1,6 +1,10 @@
 $(document).ready(function() {
     var isrun = false;
     var window_height = $(window).height();
+    $(".frameweb").css({
+        'display': 'none',
+        'bottom': '-' + window_height + 'px'
+    });
     $(".output").css({
         'height': window_height - 40 + 'px'
     });
@@ -57,6 +61,9 @@ $(document).ready(function() {
             });
             $(".goback").attr('disabled', 'disabled');
             isrun = true;
+            $(".frameweb").css({
+                'display': 'block'
+            });
             $(".frameweb").animate({
                 'bottom': '0'
             }, 1000, function() {
