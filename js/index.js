@@ -60,7 +60,7 @@ $(document).ready(function() {
                     'src': _thisurl
                 });
             });
-            $(".output").ready(function() {
+            $(window).ready(function() {
                 // alert("right");
                 $(".goback").removeAttr('disabled');
                 isrun = false;
