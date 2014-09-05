@@ -71,7 +71,7 @@ $(document).ready(function() {
             });
             $(".frameweb").animate({
                 'bottom': '0'
-            }, 1000, function() {
+            }, 300, function() {
                 $(".output").attr({
                     'src': _thisurl
                 });
@@ -108,7 +108,7 @@ $(document).ready(function() {
         if (_this.data('disabled') === 'false') {
             $(".frameweb").animate({
                 'bottom': '-30%'
-            }, 1000, function() {
+            }, 300, function() {
                 $(".frameweb").css({
                     'bottom': '-100%'
                 });
