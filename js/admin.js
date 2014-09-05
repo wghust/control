@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    adminlogin = function(fn) {
+    adminlogin = function() {
         var sacookie = $.cookie('sa');
 
         // alert(sacookie);
@@ -46,10 +46,16 @@ $(document).ready(function() {
                         var str = "<div class='useroplist' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span><span class='msg'><img src='imgs/hc.gif'></span></div>";
                         $(".useropcontent").append(str);
                     }
-                    fn();
+                    setTimeout(function() {
+                        $(".submitadmin").val("登录");
+                    }, 1000);
+                    projectop();
                 },
                 error: function() {
                     $(".submitadmin").val("账户密码错误!");
+                    setTimeout(function() {
+                        $(".submitadmin").val("登录");
+                    }, 1000);
                 },
                 dataType: 'json'
             }, 'json');

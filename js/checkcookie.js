@@ -26,7 +26,7 @@ $(document).ready(function() {
                 },
                 error: function(error) {
                     // console.log(jqXHR);
-                    fn(fn2);
+                    fn();
                 },
                 dataType: 'json'
             })
