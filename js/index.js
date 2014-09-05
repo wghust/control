@@ -40,8 +40,8 @@ $(document).ready(function() {
 
         $(".sectitle").html("<span class='back'>返回</span>&nbsp;&nbsp;" + data.name);
         $(".back").click(function() {
-            $(".sec").slideUp(1000, function() {
-                $(".userop").slideDown(1000);
+            $(".sec").slideUp(200, function() {
+                $(".userop").slideDown(200);
             });
         });
 
@@ -49,8 +49,8 @@ $(document).ready(function() {
             var str = "<div class='secdiv' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span></div>";
             $(".secopcontent").append(str);
         }
-        $(".userop").slideUp(1000, function() {
-            $(".sec").slideDown(1000);
+        $(".userop").slideUp(200, function() {
+            $(".sec").slideDown(200);
         });
 
         $(".secdiv").click(function() {
