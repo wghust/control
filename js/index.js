@@ -60,16 +60,20 @@ $(document).ready(function() {
                     'src': _thisurl
                 });
             });
-            var iframe = $(".output");
-            if (iframe.attachEvent) {
-                iframe.attachEvent("onload", function() {
-                    serverStop();
-                });
-            } else {
-                iframe.onload = function() {
-                    serverStop();
-                }
-            }
+            // var iframe = $(".output");
+            // if (iframe.attachEvent) {
+            //     iframe.attachEvent("onload", function() {
+            //         serverStop();
+            //     });
+            // } else {
+            //     iframe.onload = function() {
+            //         serverStop();
+            //     }
+            // }
+            $(".output").load(function() {
+                console.log("now");
+                serverStop();
+            });
             // serverStop();
         });
     };
