@@ -46,7 +46,7 @@ $(document).ready(function() {
         });
         for (i = 0; i < data.profile.length; i++) {
             if (data.name === 'server') {
-                var str = "<div class='secdiv' data-target='" + data.url + "'><span class='hostname'>" + data.profile[i].hostname + "</span><span class='ansible_ssh_host'>" + data.profile[i].ansible_ssh_host + "</span></div>";
+                var str = "<div class='secdiv' data-target='" + data.url + "'><span class='hostname'>" + data.profile[i].hostname + "</span><br><span class='ansible_ssh_host'>" + data.profile[i].ansible_ssh_host + "</span></div>";
             } else {
                 var str = "<div class='secdiv' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span></div>";
             }
@@ -163,6 +163,7 @@ $(document).ready(function() {
                 $(".cmd").css({
                     'display': 'none'
                 });
+                $(".cmd").val('');
                 $(".newurl").css({
                     'display': 'none'
                 });
