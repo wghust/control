@@ -47,6 +47,9 @@ $(document).ready(function() {
         $(".secdiv").click(function() {
             var _this = $(this);
             var _thisurl = _this.data('target');
+            $(".bg").css({
+                'display': 'block'
+            });
             $(".frameweb").animate({
                 'bottom': '0'
             }, 1000, function() {
@@ -54,6 +57,8 @@ $(document).ready(function() {
                     'src': _thisurl
                 });
             });
+            // var isrun = false;
+
             // $.ajax({
             //     type: 'GET',
             //     url: _thisurl,
