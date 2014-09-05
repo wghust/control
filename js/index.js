@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    var isrun = false;
     projectop = function() {
         $(".useroplist").click(function() {
             var _this = $(this);
@@ -44,12 +44,15 @@ $(document).ready(function() {
         $(".userop").slideUp(1000, function() {
             $(".sec").slideDown(1000);
         });
+
         $(".secdiv").click(function() {
             var _this = $(this);
             var _thisurl = _this.data('target');
             $(".bg").css({
                 'display': 'block'
             });
+            $(".goback").attr('disabled', 'disabled');
+            isrun = true;
             $(".frameweb").animate({
                 'bottom': '0'
             }, 1000, function() {
@@ -57,19 +60,23 @@ $(document).ready(function() {
                     'src': _thisurl
                 });
             });
-            // var isrun = false;
+            serverStop();
+        });
+    };
 
-            // $.ajax({
-            //     type: 'GET',
-            //     url: _thisurl,
-            //     success: function(data, textStatus, jqXHR) {
-            //         showbackdata(data);
-            //     },
-            //     error: function(data, textStatus, jqXHR) {
-
-            //     },
-            //     dataType: 'json'
-            // })
+    serverStop = function() {
+        function resetBtn() {
+            window.onbeforeunload = null;
+            $(".goback").removeAttr('disabled');
+            isrun = false;
+        }
+        console.log(isrun);
+        resetBtn();
+        console.log(isrun);
+        $(".goback").click(function() {
+            $(".frameweb").animate({
+                'bottom': '-240px'
+            }, 1000);
         });
     };
 
