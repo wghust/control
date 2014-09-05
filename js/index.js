@@ -1,5 +1,9 @@
 $(document).ready(function() {
     var isrun = false;
+    var window_height = $(window).height();
+    $(".output").css({
+        'height': window_height - 40 + 'px'
+    });
     projectop = function() {
         $(".useroplist").click(function() {
             var _this = $(this);
@@ -84,7 +88,7 @@ $(document).ready(function() {
         isrun = false;
         $(".goback").click(function() {
             $(".frameweb").animate({
-                'bottom': '-440px'
+                'bottom': '-100%'
             }, 1000);
             $(".bg").css({
                 'display': 'none'
