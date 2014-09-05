@@ -61,7 +61,7 @@ $(document).ready(function() {
                 });
             });
             $(".output").ready(function() {
-                alert("right");
+                // alert("right");
                 $(".goback").removeAttr('disabled');
                 isrun = false;
                 $(".goback").click(function() {
