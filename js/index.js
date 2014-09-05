@@ -174,5 +174,17 @@ $(document).ready(function() {
     showbackdata = function(data) {
         console.log(data);
     };
+
+    $(".logout").click(function(e) {
+        var nowcookie = $.cookie('sa');
+        if (nowcookie !== null || nowcookie !== '') {
+            $.cookie('sa', null, {
+                path: '/'
+            });
+            alert("退出成功");
+            location.reload();
+        }
+        return false;
+    });
     checkCookie(adminlogin, projectop);
 });
