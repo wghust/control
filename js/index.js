@@ -60,35 +60,23 @@ $(document).ready(function() {
                     'src': _thisurl
                 });
             });
-            $(window).ready(function() {
-                // alert("right");
-                $(".goback").removeAttr('disabled');
-                isrun = false;
-                $(".goback").click(function() {
-                    $(".frameweb").animate({
-                        'bottom': '-240px'
-                    }, 1000);
-                    $(".bg").css({
-                        'display': 'none'
-                    });
-                    $(".output").attr({
-                        'src': ''
-                    });
+            var iframe = $(".frameweb");
+            if (iframe.attachEvent) {
+                iframe.attachEvent("onload", function() {
+                    serverStop();
                 });
-            });
+            } else {
+                iframe.onload = function() {
+                    serverStop();
+                }
+            }
             // serverStop();
         });
     };
 
     serverStop = function() {
-        function resetBtn() {
-            window.onbeforeunload = null;
-            $(".goback").removeAttr('disabled');
-            isrun = false;
-        }
-        console.log(isrun);
-        resetBtn();
-        console.log(isrun);
+        $(".goback").removeAttr('disabled');
+        isrun = false;
         $(".goback").click(function() {
             $(".frameweb").animate({
                 'bottom': '-240px'
