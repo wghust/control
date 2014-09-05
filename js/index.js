@@ -95,13 +95,17 @@ $(document).ready(function() {
         isrun = false;
         $(".goback").click(function() {
             $(".frameweb").animate({
-                'bottom': '-100%'
-            }, 1000);
-            $(".bg").css({
-                'display': 'none'
-            });
-            $(".output").attr({
-                'src': ''
+                'bottom': '-30%'
+            }, 1000, function() {
+                $(".frameweb").css({
+                    'bottom': '-100%'
+                });
+                $(".bg").css({
+                    'display': 'none'
+                });
+                $(".output").attr({
+                    'src': ''
+                });
             });
         });
     };
