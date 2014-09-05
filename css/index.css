@@ -148,7 +148,7 @@ a {
 	left: 0;
 	z-index: 3; 
 	width: 100%;
-	height: 220px;
+	height: 240px;
 	overflow: auto;
 	background-color: rgb(213, 213, 213);
 	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
@@ -171,8 +171,8 @@ a {
 }
 .frametop {
 	position: relative;
-	height: 20px;
-	line-height: 20px;
+	height: 40px;
+	line-height: 40px;
 	padding: 0 20px;
 	background-color: white;
 }
