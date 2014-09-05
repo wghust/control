@@ -62,11 +62,6 @@ $(document).ready(function() {
             // $(".bg").css({
             //     'display': 'block'
             // });
-            $(".goback").data({
-                'disabled': 'true'
-            }).css({
-                'opacity': '0.5'
-            });
             // $(".goback").attr('disabled', 'disabled');
             if (data.name === 'server') {
                 var _this_hostname = _this.children(".hostname").text();
@@ -96,11 +91,21 @@ $(document).ready(function() {
                         $(".output").attr({
                             'src': _thisnowurl
                         });
+                        $(".goback").data({
+                            'disabled': 'true'
+                        }).css({
+                            'opacity': '0.5'
+                        });
                         serverStop();
                     }
                     return false;
                 });
             } else {
+                $(".goback").data({
+                    'disabled': 'true'
+                }).css({
+                    'opacity': '0.5'
+                });
                 isrun = true;
                 $(".frameweb").css({
                     'display': 'block'
