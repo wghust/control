@@ -84,7 +84,7 @@ $(document).ready(function() {
         isrun = false;
         $(".goback").click(function() {
             $(".frameweb").animate({
-                'bottom': '-240px'
+                'bottom': '-440px'
             }, 1000);
             $(".bg").css({
                 'display': 'none'
