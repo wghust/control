@@ -44,9 +44,12 @@ $(document).ready(function() {
                 $(".userop").slideDown(200);
             });
         });
-
         for (i = 0; i < data.profile.length; i++) {
-            var str = "<div class='secdiv' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span></div>";
+            if (data.name === 'server') {
+                var str = "<div class='secdiv' data-target='" + data.url + "'><span class='hostname'>" + data.profile[i].hostname + "</span><span class='ansible_ssh_host'>" + data.profile[i].ansible_ssh_host + "</span></div>";
+            } else {
+                var str = "<div class='secdiv' data-target='" + data.profile[i].url + "'><span>" + data.profile[i].title + "</span></div>";
+            }
             $(".secopcontent").append(str);
         }
         $(".userop").slideUp(200, function() {
@@ -65,18 +68,52 @@ $(document).ready(function() {
                 'opacity': '0.5'
             });
             // $(".goback").attr('disabled', 'disabled');
-            isrun = true;
-            $(".frameweb").css({
-                'display': 'block'
-            });
-            $(".frameweb").animate({
-                'bottom': '0'
-            }, 300, function() {
-                $(".output").attr({
-                    'src': _thisurl
+            if (data.name === 'server') {
+                var _this_hostname = _this.children(".hostname").text();
+                var _this_ansible_ssh_host = _this.children(".ansible_ssh_host").text();
+                isrun = true;
+                $(".frameweb").css({
+                    'display': 'block'
                 });
-                serverStop();
-            });
+                $(".cmd").css({
+                    'display': 'block'
+                });
+                $(".newurl").css({
+                    'display': 'block'
+                });
+                $(".frameweb").animate({
+                    'bottom': '0'
+                }, 300, function() {
+                    // $(".output").attr({
+                    //     'src': _thisurl
+                    // });
+                    // serverStop();
+                });
+                $(".newurl").click(function(e) {
+                    var cmd = $(".cmd").val();
+                    if (cmd != '') {
+                        var _thisnowurl = _thisurl + "?server=" + _this_ansible_ssh_host + "&cmd=" + cmd;
+                        $(".output").attr({
+                            'src': _thisnowurl
+                        });
+                        serverStop();
+                    }
+                    return false;
+                });
+            } else {
+                isrun = true;
+                $(".frameweb").css({
+                    'display': 'block'
+                });
+                $(".frameweb").animate({
+                    'bottom': '0'
+                }, 300, function() {
+                    $(".output").attr({
+                        'src': _thisurl
+                    });
+                    serverStop();
+                });
+            }
             // var iframe = $(".output");
             // if (iframe.attachEvent) {
             //     iframe.attachEvent("onload", function() {
@@ -117,6 +154,12 @@ $(document).ready(function() {
                 // });
                 $(".output").attr({
                     'src': ''
+                });
+                $(".cmd").css({
+                    'display': 'none'
+                });
+                $(".newurl").css({
+                    'display': 'none'
                 });
             });
         }
