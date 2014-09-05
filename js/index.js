@@ -56,9 +56,9 @@ $(document).ready(function() {
         $(".secdiv").click(function() {
             var _this = $(this);
             var _thisurl = _this.data('target');
-            $(".bg").css({
-                'display': 'block'
-            });
+            // $(".bg").css({
+            //     'display': 'block'
+            // });
             $(".goback").attr('disabled', 'disabled');
             isrun = true;
             $(".frameweb").css({
@@ -100,9 +100,9 @@ $(document).ready(function() {
                 $(".frameweb").css({
                     'bottom': '-100%'
                 });
-                $(".bg").css({
-                    'display': 'none'
-                });
+                // $(".bg").css({
+                //     'display': 'none'
+                // });
                 $(".output").attr({
                     'src': ''
                 });
