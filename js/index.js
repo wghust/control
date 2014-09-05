@@ -61,6 +61,7 @@ $(document).ready(function() {
                 });
             });
             $(window).load(function() {
+                alert("right");
                 $(".goback").removeAttr('disabled');
                 isrun = false;
                 $(".goback").click(function() {
