@@ -180,7 +180,7 @@ $(document).ready(function() {
         if (nowcookie !== null || nowcookie !== '') {
             $.ajax({
                 type: 'GET',
-                url: 'sa.kascend.com/auth/out',
+                url: 'http://sa.kascend.com/auth/out',
                 success: function(data, textStatus, jqXHR) {
                     alert("退出成功");
                     location.reload();
