@@ -76,7 +76,7 @@ $(document).ready(function() {
                     'display': 'block'
                 });
                 $(".cmd").css({
-                    'display': 'block'
+                    'display': 'inline-block'
                 });
                 $(".newurl").css({
                     'display': 'block'
