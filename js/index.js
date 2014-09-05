@@ -70,6 +70,7 @@ $(document).ready(function() {
                 $(".output").attr({
                     'src': _thisurl
                 });
+                serverStop();
             });
             // var iframe = $(".output");
             // if (iframe.attachEvent) {
@@ -81,35 +82,32 @@ $(document).ready(function() {
             //         serverStop();
             //     }
             // }
-            $(".output").load(function() {
-                console.log("now");
-                serverStop();
-            });
             // serverStop();
         });
     };
 
     serverStop = function() {
-        console.log("ok");
-        $(".goback").removeAttr('disabled');
-        isrun = false;
-        $(".goback").click(function() {
-            $(".frameweb").animate({
-                'bottom': '-30%'
-            }, 1000, function() {
-                $(".frameweb").css({
-                    'bottom': '-100%'
-                });
-                // $(".bg").css({
-                //     'display': 'none'
-                // });
-                $(".output").attr({
-                    'src': ''
-                });
-            });
+        $(".output").load(function() {
+            console.log("now");
+            $(".goback").removeAttr('disabled');
+            isrun = false;
         });
     };
-
+    $(".goback").click(function() {
+        $(".frameweb").animate({
+            'bottom': '-30%'
+        }, 1000, function() {
+            $(".frameweb").css({
+                'bottom': '-100%'
+            });
+            // $(".bg").css({
+            //     'display': 'none'
+            // });
+            $(".output").attr({
+                'src': ''
+            });
+        });
+    });
     showbackdata = function(data) {
         console.log(data);
     };
